@@ -1,5 +1,7 @@
 package com.ubtechinc.model;
 
+import java.io.Serializable;
+
 /**
  * @title 
  *
@@ -9,7 +11,9 @@ package com.ubtechinc.model;
  *
  * Copyright (C)2012-2017 深圳优必选科技 All rights reserved.
  */
-public class Result<T> {
+public class Result<T> implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 
 	public boolean success;
 	

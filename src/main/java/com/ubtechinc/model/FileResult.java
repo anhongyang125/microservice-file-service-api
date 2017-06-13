@@ -1,5 +1,7 @@
 package com.ubtechinc.model;
 
+import java.io.Serializable;
+
 /**
  * @title 文件操作结果，比如删除操作等
  *
@@ -9,7 +11,9 @@ package com.ubtechinc.model;
  *
  * Copyright (C)2012-2017 深圳优必选科技 All rights reserved.
  */
-public class FileResult {
+public class FileResult implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 
 	private Integer code;//200：执行成功，612 指定资源不存在或已被删除。
 	

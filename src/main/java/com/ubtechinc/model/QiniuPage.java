@@ -1,5 +1,6 @@
 package com.ubtechinc.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.ubtechinc.entity.FileInfo;
@@ -13,7 +14,9 @@ import com.ubtechinc.entity.FileInfo;
  *
  * Copyright (C)2012-2017 深圳优必选科技 All rights reserved.
  */
-public class QiniuPage {
+public class QiniuPage implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private String marker;
 	
