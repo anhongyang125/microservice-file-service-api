@@ -23,20 +23,22 @@ public class UploadResult implements Serializable{
 	
 	private final String fileName;
 	
+	private final String hash;
 	
-	public UploadResult( boolean success,String url,String message,String fileName) {
+	public UploadResult( boolean success,String url,String message,String fileName, String hash) {
 		this.success = success;
 		this.url = url;
 		this.message = message;
 		this.fileName = fileName;
+		this.hash = hash;
 	}
 	
-	public static UploadResult successed(String url,String fileName){
-		return new UploadResult(true,url,"上传成功",fileName);
+	public static UploadResult successed(String url,String fileName, String hash){
+		return new UploadResult(true,url,"上传成功",fileName, hash);
 	}
 	
 	public static UploadResult failed(String message,String fileName){
-		return new UploadResult(false,null,message,fileName);
+		return new UploadResult(false,null,message,fileName, null);
 	}
 
 	
@@ -55,6 +57,10 @@ public class UploadResult implements Serializable{
 
 	public String getMessage() {
 		return message;
+	}
+
+	public String getHash() {
+		return hash;
 	}
 	
 	
